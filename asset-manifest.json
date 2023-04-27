@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/user-cards-maker/static/css/main.86bee891.css",
+    "main.js": "/user-cards-maker/static/js/main.33bacb90.js",
+    "static/media/bcgImg.png": "/user-cards-maker/static/media/bcgImg.5b270f84315fa26359f9.png",
+    "index.html": "/user-cards-maker/index.html",
+    "main.86bee891.css.map": "/user-cards-maker/static/css/main.86bee891.css.map",
+    "main.33bacb90.js.map": "/user-cards-maker/static/js/main.33bacb90.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.86bee891.css",
+    "static/js/main.33bacb90.js"
+  ]
+}
