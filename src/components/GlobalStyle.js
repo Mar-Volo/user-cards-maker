@@ -43,11 +43,29 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.main {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 64px; 
+    width: 100%;
+}
+
+.main__container {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 1200px;
+}
 .filter-container {
   display: flex;
   align-items: center;
- justify-content: flex-end;
-  width: 1200px;
+  justify-content: flex-end;
+  width: 100%;
   margin-bottom: 50px;
 }
 .button {
