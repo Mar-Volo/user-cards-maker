@@ -1,5 +1,5 @@
-import { createGlobalStyle } from "styled-components";
-import "modern-normalize";
+import { createGlobalStyle } from 'styled-components';
+import 'modern-normalize';
 
 export const GlobalStyle = createGlobalStyle`
 * {
@@ -54,7 +54,13 @@ img {
 font-weight: 600;
 font-size: 18px;
 line-height: 22px;
-background-color: #EBD8FF;
+background-color: #ebd8ff;
+}
+
+.follow {
+  &:hover {
+  background-color: #5CD3A8;
+}
 }
 .following {
 background-color: #5CD3A8;

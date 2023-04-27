@@ -36,13 +36,13 @@ export const Users = ({ users }) => {
         {users
   .filter((user) => {
     if (filter === "all") return true;
-    if (filter === "following") return isFollow[user.id];
-    if (filter === "not-following") return !isFollow[user.id];
+    if (filter === "follow") return isFollow[user.id];
+    if (filter === "following") return !isFollow[user.id];
     return false;
   })
   .map(({ id, user, tweets, followers, avatar }) => {
-    const followText = isFollow[id] ? "following" : "follow";
-    const followClass = isFollow[id] ? "following" : "not-following";
+    const followText = isFollow[id] ? "follow" : "following";
+    const followClass = isFollow[id] ? "follow" : "following";
     return (
       <UserCard key={id}>
         <Eclipse>
