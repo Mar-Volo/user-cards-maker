@@ -25,14 +25,7 @@ export const App = () => {
       } else {
         try {
           setStatus('pending');
-          if (users.length === 0) {
-            setStatus('idle');
-            toast('Users not found', {
-              position: 'top-right',
-              autoClose: 1500,
-              theme: 'dark',
-            });
-          } else {
+          if (users.length !== 0) {
             setStatus('resolved');
             setUsers(users);
           }
@@ -58,12 +51,12 @@ export const App = () => {
   const loadMore = async () => {
     setStatus('pending');
     try {
-      const newUsers = await fetchUsers((page += 1));
+      const newUsers = await fetchUsers((page + 1));
+       page += 1;
       setUsers(prevUsers => [...prevUsers, ...newUsers]);
       setStatus('resolved');
     } catch (err) {
       setStatus('rejected');
-      toast.error('Failed to load more users');
     }
   };
 
@@ -91,10 +84,7 @@ export const App = () => {
         <main className="main">
           <Container className="main__container">
             <Users users={users} />
-            <MainButton
-              className='button'
-              onClick={loadMore}
-            >
+            <MainButton className="button" onClick={loadMore}>
               Loading...
             </MainButton>
           </Container>
@@ -115,10 +105,7 @@ export const App = () => {
         <main className="main">
           <Container className="main__container">
             <Users users={users} />
-            <MainButton
-              className='button'
-              onClick={loadMore}
-            >
+            <MainButton className="button" onClick={loadMore}>
               Load more
             </MainButton>
           </Container>
