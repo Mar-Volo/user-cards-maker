@@ -10,7 +10,7 @@ export const Users = ({ users }) => {
   );
   const [filter, setFilter] = useState('all');
 
-  useEffect(() => {
+ useEffect(() => {
     const visibleIsFollow = JSON.parse(localStorage.getItem('isFollow'));
     if (visibleIsFollow) {
       setIsFollow(visibleIsFollow);
@@ -39,7 +39,13 @@ export const Users = ({ users }) => {
           .filter(user => {
             if (filter === 'all') return true;
             if (filter === 'follow') return !isFollow[user.id];
-            if (filter === 'following') return isFollow[user.id];
+            if (filter === 'following') {
+              if (Object.values(isFollow).includes(true)) {
+                return isFollow[user.id];
+              } else {
+                return true;
+              }
+            }
             return false;
           })
           .map(({ id, user, tweets, followers, avatar }) => {
