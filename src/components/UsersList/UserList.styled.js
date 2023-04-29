@@ -1,10 +1,10 @@
-import styled from "styled-components";
-import bcgImg from "../../images/bcgImg.png";
-import logo from "../../images/Logo.png";
+import styled from 'styled-components';
+import bcgImg from '../../images/bcgImg.png';
+import logo from '../../images/Logo.png';
 
 export const UsersList = styled.ul`
   max-width: 790px;
-margin-bottom: 50px;
+  margin-bottom: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,7 +23,7 @@ export const UserCard = styled.li`
   justify-content: center;
   padding: 36px;
   padding-top: 150px;
-  
+
   width: 380px;
   height: 460px;
   border-radius: 20px;
@@ -34,7 +34,7 @@ export const UserCard = styled.li`
   text-transform: uppercase;
   position: relative;
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     right: 0;
