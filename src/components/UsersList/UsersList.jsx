@@ -54,7 +54,7 @@ export const Users = ({ users }) => {
             return (
               <UserCard id={id} key={id}>
                 <Eclipse>
-                  <img src={avatar} alt={user} width="80" />
+                  <img src={avatar} alt={user} width="80" className='avatar'/>
                 </Eclipse>
 
                 <p className="cardTitle" style={{ marginBottom: '16px' }}>

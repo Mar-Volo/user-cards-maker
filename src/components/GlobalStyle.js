@@ -68,6 +68,13 @@ img {
   width: 100%;
   margin-bottom: 50px;
 }
+.avatar {
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+  border: 8px solid transparent;
+}
+
 .button {
 font-weight: 600;
 font-size: 18px;
